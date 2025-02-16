@@ -15,8 +15,9 @@
 ### 1.1. ДАННИ
 Използваният набор от данни е "Boston House Pricing", който се поддържа от 
 Университета Карнеги Мелън и е свободно достъпен за изтегляне.
-Линк: [https://lib.stat.cmu.edu/datasets/boston](https://lib.stat.cmu.edu/datasets/boston)
 Основно се обработват два файла: данни за жилища (housing.data) и съответните имена на колоните (housing.names).
+
+*Линк: [https://lib.stat.cmu.edu/datasets/boston](https://lib.stat.cmu.edu/datasets/boston)*
 
 ## 2. ЕДНОМЕРЕН АНАЛИЗ (X1, X2 и X3):
 # Статистическа сума за X1 = 'CRIM' (Криминални престъпления):
