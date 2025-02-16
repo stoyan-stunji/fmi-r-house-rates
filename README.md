@@ -22,7 +22,11 @@
 ### 4. ПОСТРОЯВАНЕ НА ЛИНЕЕН МОДЕЛ:
 - Изграждане на линеен модел, който предсказва log(MEDV) (цената на жилищата) въз основа на долните променливи.
 ```yaml
-model_full <- lm(log(MEDV) ~ CRIM + ZN + INDUS + CHAS + NOX + RM + AGE + DIS + RAD + TAX + PTRATIO + B + LSTAT, data = housing.df)
+model <- lm(log(MEDV) ~ CRIM + ZN + INDUS + CHAS + NOX + RM + AGE + DIS + RAD + TAX + PTRATIO + B + LSTAT, data = housing.df)
+```
+![graph](https://github.com/stoyan-stunji/fmi-r-house-rates/blob/main/graph.png)
+```yaml
+Фигура 1.
 ```
 
 ### 5. ЗАКЛЮЧЕНИЕ:
