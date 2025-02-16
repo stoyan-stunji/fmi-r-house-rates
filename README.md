@@ -42,8 +42,11 @@ X2 = ZN, и X3 = INDUS, като се установява, че всяка от
 между някои от тези променливи и цената на имотите.
 
 ### 6. ИЗПОЛЗВАНА ЛИТЕРАТУРА:
-- Проектът е базиран на [линк](https://github.com/anushkaparadkar/R-Projects/blob/master/House%20Rate%20Prediction/housing.names).
-- Използваният набор от данни е "Boston House Pricing", който се поддържа от 
+- Използваният набор от данни е [Boston House Pricing]([https://lib.stat.cmu.edu/datasets/boston](https://lib.stat.cmu.edu/datasets/boston)), който се поддържа от 
 Университета Карнеги Мелън и е свободно достъпен за изтегляне. Основно се обработват два файла: данни за жилища (housing.data) и съответните имена на колоните (housing.names).
+- Проектът е базиран на [R-Projects-House](https://github.com/anushkaparadkar/R-Projects/blob/master/House%20Rate%20Prediction/housing.names).
 
-*Линк: [https://lib.stat.cmu.edu/datasets/boston](https://lib.stat.cmu.edu/datasets/boston)*
+### 7. ЗАБАВЕН ФАКТ:
+- Името на проекта е базирано на тази песен: [Jimi Hendrix - Red House](https://www.youtube.com/watch?v=_whI9m0SFys)
+
+![jimi]()
