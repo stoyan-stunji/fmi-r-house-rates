@@ -20,73 +20,20 @@
 *Линк: [https://lib.stat.cmu.edu/datasets/boston](https://lib.stat.cmu.edu/datasets/boston)*
 
 ## 2. ЕДНОМЕРЕН АНАЛИЗ (X1, X2 и X3):
-# Статистическа сума за X1 = 'CRIM' (Криминални престъпления):
+- Статистическа сума за X1 = 'CRIM' (Криминални престъпления);
+- Статистическа сума за X2 = 'ZN' (% на земя за жилищно строителство);
+- Статистическа сума за X3 = 'INDUS' (% на индустриални площи).
 
-summary(housing.df$CRIM)
 
-# Визуализиране на разпределението на X1:
+## 3. МНОГОМЕРЕН АНАЛИЗ (Y = 'MEDV'):
+- Линейна регресия на MEDV спрямо CRIM, ZN и INDUS т.е. Y ~ X1, X2 и X3.
 
-ggplot(housing.df, aes(x = CRIM)) + 
-  geom_histogram(bins = 20, alpha = 0.5, fill = "purple") +
-  labs(title = "Distribution of the Crime Rate", x = "Crime Rate", y = "Frequency")
-
-# Статистическа сума за X2 = 'ZN' (% на земя за жилищно строителство):
-
-summary(housing.df$ZN)
-
-# Визуализиране на разпределението на X2:
-
-ggplot(housing.df, aes(x = ZN)) + 
-  geom_histogram(bins = 20, alpha = 0.5, fill = "purple") +
-  labs(title = "Distribution of the Residential Land Zone", x = "Residential Land Zone", y = "Frequency")
-
-# Статистическа сума за X3 = 'INDUS' (% на индустриални площи):
-
-summary(housing.df$INDUS)
-
-# Визуализиране на разпределението на X3:
-
-ggplot(housing.df, aes(x = INDUS)) + 
-  geom_histogram(bins = 20, alpha = 0.5, fill = "purple") +
-  labs(title = "Distribution of Industrial Land Percentage", x = "Industrial Land Percentage", y = "Frequency")
-
-# ggplot(): Основната функция в библиотеката ggplot2, която задава данните и 
-#   визуализацията.
-# geom_histogram(): -//-
-# aes(x = A): Указва, че по ос X ще бъде използвана променливата A.
-# labs(): Задава етикетите и заглавието на графиката.
-
-# 3. МНОГОМЕРЕН АНАЛИЗ (Y = 'MEDV'):
-# ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
-# Линейна регресия на MEDV спрямо CRIM т.е. Y ~ X1:
-
-model_crim <- lm(log(MEDV) ~ CRIM, data = housing.df)
-summary(model_crim)
-
-# Линейна регресия на MEDV спрямо ZN т.е. Y ~ X2:
-
-model_zn <- lm(log(MEDV) ~ ZN, data = housing.df)
-summary(model_zn)
-
-# Линейна регресия на MEDV спрямо INDUS т.е. Y ~ X3:
-
-model_indus <- lm(log(MEDV) ~ INDUS, data = housing.df)
-summary(model_indus)
-
-# lm(log(MEDV) ~ A, data = housing.df): Изграждане на линеен модел, който 
-# предсказва log(MEDV) (цената на жилищата) въз основа на A = {X1, X2, X3}.
-# log(MEDV) ~ A: Формула за линейна регресия, където MEDV е зависимата 
-# променлива и A = {X1, X2, X3} е независимата променлива.
-
-# 4. ПОСТРОЯВАНЕ НА ЛИНЕЕН МОДЕЛ:
-# ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
-# Създаване на многомерен линеен модел:
-
+## 4. ПОСТРОЯВАНЕ НА ЛИНЕЕН МОДЕЛ:
+- Изграждане на линеен модел, който предсказва log(MEDV) (цената на жилищата) въз основа на долните променливи.
+```yaml
 model_full <- lm(log(MEDV) ~ CRIM + ZN + INDUS + CHAS + NOX + RM + AGE + DIS + RAD + TAX + PTRATIO + B + LSTAT, data = housing.df)
-summary(model_full)
+```
 
-# Изграждане на линеен модел, който предсказва log(MEDV) (цената на жилищата)
-# въз основа на горните променливи.
 
 # 5. ЗАКЛЮЧЕНИЕ:
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾
