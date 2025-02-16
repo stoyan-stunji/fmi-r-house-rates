@@ -44,7 +44,7 @@ X2 = ZN, и X3 = INDUS, като се установява, че всяка от
 между някои от тези променливи и цената на имотите.
 
 ### 6. ИЗПОЛЗВАНА ЛИТЕРАТУРА:
-- Използваният набор от данни е [Boston House Pricing]([https://lib.stat.cmu.edu/datasets/boston](https://lib.stat.cmu.edu/datasets/boston)), който се поддържа от 
+- Използваният набор от данни е [Boston House Pricing](https://lib.stat.cmu.edu/datasets/boston), който се поддържа от 
 Университета Карнеги Мелън и е свободно достъпен за изтегляне. Основно се обработват два файла: данни за жилища (housing.data) и съответните имена на колоните (housing.names).
 - Проектът е базиран на [R-Projects-House](https://github.com/anushkaparadkar/R-Projects/blob/master/House%20Rate%20Prediction/housing.names).
 
